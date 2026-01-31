@@ -1,0 +1,9 @@
+services:
+  telegram-service:
+    build: .
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - BUFFER_URL=${BUFFER_URL}
+      - BUFFER_USER=${BUFFER_USER}
+      - BUFFER_PASS=${BUFFER_PASS}
+    restart: unless-stopped
