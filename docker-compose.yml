@@ -1,6 +1,8 @@
 services:
   telegram-service:
     build: .
+    container_name: tg2claudecode-buffer
+    network_mode: host
     environment:
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - BUFFER_URL=${BUFFER_URL}
